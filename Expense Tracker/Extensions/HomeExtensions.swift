@@ -37,8 +37,8 @@ extension HomeViewController {
 //                totalExpense += expenseDetail[i].amount
 //            }
 //        }
-        incomeLabel.text = "+\(currencyFormatter.string(from: totalIncome as NSNumber) ?? "")"
-        expenseLabel.text = "-\(currencyFormatter.string(from: totalExpense as NSNumber) ?? "")"
+        incomeLabel.text = "+\(currencyFormatter.string(from: totalIncome as NSNumber) ?? "0.0")"
+        expenseLabel.text = "-\(currencyFormatter.string(from: totalExpense as NSNumber) ?? "0.0")"
         
         
     }
@@ -58,11 +58,24 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
 
             cell.categoryImageInCell.image = UIImage(named: item.category ?? "")!
+
             cell.titleInCell.text = item.title
             cell.timeInCell.text = item.date
             cell.amountInCell.text = String(item.amount)
+        
+//        category[index] += item.category!
+//        money[index] += item.amount
+//        print(category)
+//        print(money)
+        
+        
+//        if item.category! == "salary" || item.category! == "saving" {
+//            totalIncome += item.amount
+//        } else {
+//            totalExpense += item.amount
+//        }
 
-
+        index += 1
         return cell
     }
     
@@ -120,17 +133,3 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 
 }// end extension
 
-extension UITableView {
-    /// Reloads a table view without losing track of what was selected.
-    func reloadDataSavingSelections() {
-        let selectedRows = indexPathsForSelectedRows
-
-        reloadData()
-
-        if let selectedRow = selectedRows {
-            for indexPath in selectedRow {
-                selectRow(at: indexPath, animated: false, scrollPosition: .none)
-            }
-        }
-    }
-}

@@ -173,7 +173,7 @@ class AddViewController: UIViewController {
 
 
         
-//        tabBarController?.selectedIndex = 0
+        tabBarController?.selectedIndex = 0
         
         
     }

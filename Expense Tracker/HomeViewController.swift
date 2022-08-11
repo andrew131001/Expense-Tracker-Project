@@ -18,6 +18,7 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
     
+    
     @IBOutlet weak var tableView: UITableView!
     
     
@@ -37,6 +38,10 @@ class HomeViewController: UIViewController {
     
     var totalExpense: Double = 0.0
     var totalExpenseString: String = ""
+    
+    var category: [String] = []
+    var money: [Double] = []
+    var index = 0
     
 
     
@@ -79,6 +84,7 @@ class HomeViewController: UIViewController {
             self.items = try context.fetch(Expense.fetchRequest())
             
             DispatchQueue.main.async {
+                
                 self.tableView?.reloadData()
                 
             }
