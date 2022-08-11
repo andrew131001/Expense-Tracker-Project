@@ -165,7 +165,7 @@
                         <outlet property="currentDateLabel" destination="WKX-jQ-J6i" id="7it-Dm-Opx"/>
                         <outlet property="expenseLabel" destination="9Wo-Fy-fzh" id="UCT-UV-f1B"/>
                         <outlet property="incomeLabel" destination="FQk-de-NZt" id="IAh-pZ-c45"/>
-                        <outlet property="tableView" destination="pvG-FJ-1f8" id="ssc-to-eHf"/>
+                        <outlet property="tableView" destination="pvG-FJ-1f8" id="v1S-1h-AmE"/>
                         <segue destination="JEI-yl-XuS" kind="show" id="jam-Vr-ipO"/>
                     </connections>
                 </viewController>
