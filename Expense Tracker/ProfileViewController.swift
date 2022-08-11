@@ -11,7 +11,7 @@ import CoreData
 class ProfileViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
-    //reference to managed object context
+    //reference to managed object context 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     var items:[Profile]?
     
