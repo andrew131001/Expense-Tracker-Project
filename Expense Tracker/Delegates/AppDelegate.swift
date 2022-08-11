@@ -3,6 +3,7 @@
 //  Expense Tracker
 //
 //  Created by Andrew Ok on 2022-07-10.
+//  Edited by Shunsuke Kobayashi to set wait time of launch screen to 2 seconds
 //
 
 import UIKit
