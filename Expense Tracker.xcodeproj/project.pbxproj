@@ -26,6 +26,7 @@
 		496DFC2028A2F46E00F6D142 /* ExpenseTrackerData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 496DFC1E28A2F46E00F6D142 /* ExpenseTrackerData.xcdatamodeld */; };
 		496DFC2328A2F4AC00F6D142 /* Expense+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496DFC2128A2F4AC00F6D142 /* Expense+CoreDataClass.swift */; };
 		496DFC2428A2F4AC00F6D142 /* Expense+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 496DFC2228A2F4AC00F6D142 /* Expense+CoreDataProperties.swift */; };
+		97DF44AD28A4A8F900DD82E8 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97DF44AC28A4A8F900DD82E8 /* ProfileViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -50,6 +51,7 @@
 		496DFC1F28A2F46E00F6D142 /* ExpenseTrackerData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ExpenseTrackerData.xcdatamodel; sourceTree = "<group>"; };
 		496DFC2128A2F4AC00F6D142 /* Expense+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataClass.swift"; sourceTree = "<group>"; };
 		496DFC2228A2F4AC00F6D142 /* Expense+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Expense+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		97DF44AC28A4A8F900DD82E8 /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -120,6 +122,7 @@
 				496DFC1828A2F38F00F6D142 /* AddViewController.swift */,
 				492394DF28959E71001F2607 /* DetailViewController.swift */,
 				492394DD289597EA001F2607 /* CustomTableViewCell.swift */,
+				97DF44AC28A4A8F900DD82E8 /* ProfileViewController.swift */,
 				49312B23287A8E5F00E02336 /* Main.storyboard */,
 				49312B26287A8E6300E02336 /* Assets.xcassets */,
 				49312B28287A8E6300E02336 /* LaunchScreen.storyboard */,
@@ -220,6 +223,7 @@
 				492394DE289597EA001F2607 /* CustomTableViewCell.swift in Sources */,
 				496DFC1928A2F38F00F6D142 /* AddViewController.swift in Sources */,
 				49312B1E287A8E5F00E02336 /* AppDelegate.swift in Sources */,
+				97DF44AD28A4A8F900DD82E8 /* ProfileViewController.swift in Sources */,
 				492394E028959E71001F2607 /* DetailViewController.swift in Sources */,
 				496DFC2428A2F4AC00F6D142 /* Expense+CoreDataProperties.swift in Sources */,
 				496DFC1B28A2F3E600F6D142 /* HomeExtensions.swift in Sources */,
@@ -300,7 +304,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -354,7 +358,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 15.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;

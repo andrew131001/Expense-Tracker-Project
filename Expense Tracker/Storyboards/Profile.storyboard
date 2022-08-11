@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qa8-12-gPH">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Qa8-12-gPH">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -11,7 +11,6 @@
         <!--Profile-->
         <scene sceneID="ixj-rY-U0R">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="bDn-2t-Cdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="Qa8-12-gPH" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="Profile" image="person.fill" catalog="system" selectedImage="person.fill" id="Nmh-es-0Oy"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
@@ -23,13 +22,13 @@
                         <segue destination="MR7-y5-u1O" kind="relationship" relationship="rootViewController" id="EvQ-VP-Gb8"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="bDn-2t-Cdy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-926" y="-717"/>
         </scene>
         <!--View Controller-->
         <scene sceneID="6qZ-wt-yhp">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="8US-v5-xiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <viewController id="MR7-y5-u1O" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="qof-E0-SiZ">
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
@@ -39,6 +38,7 @@
                     </view>
                     <navigationItem key="navigationItem" id="buy-to-PAu"/>
                 </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="8US-v5-xiW" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-119" y="-717"/>
         </scene>
