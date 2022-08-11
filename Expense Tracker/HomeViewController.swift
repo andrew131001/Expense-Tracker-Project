@@ -79,7 +79,7 @@ class HomeViewController: UIViewController {
             self.items = try context.fetch(Expense.fetchRequest())
             
             DispatchQueue.main.async {
-                self.tableView.reloadData()
+                self.tableView?.reloadData()
                 
             }
             

@@ -56,29 +56,12 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
         
         let item = self.items!.reversed()[indexPath.row]
         
-        if item.category != nil {
+
             cell.categoryImageInCell.image = UIImage(named: item.category ?? "")!
-        } else {
-            print("category is nil")
-        }
-        if item.title != nil {
             cell.titleInCell.text = item.title
-        } else {
-            print("title is nil")
-        }
-        if item.date != nil {
             cell.timeInCell.text = item.date
-        } else {
-            print("date is nil")
-        }
-        if item.amount != nil {
             cell.amountInCell.text = String(item.amount)
-        }
-        
-        
-        
-        
-        
+
 
         return cell
     }

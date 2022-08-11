@@ -21,7 +21,7 @@ class AddViewController: UIViewController {
     
     let date = Date()
     let dateFormatter = DateFormatter()
-    var selectedDate: String?
+    var selectedDate: String = "Aug 10, 2022"
 
    
     
@@ -69,7 +69,7 @@ class AddViewController: UIViewController {
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         selectedDate = dateFormatter.string(from: datePicker.date)
 //        print(dateFormatter.string(from: datePicker.date))
-        print(selectedDate!)
+        print(selectedDate)
     }
     
     
@@ -132,18 +132,14 @@ class AddViewController: UIViewController {
         let alert = UIAlertController(title: "Confirm", message: "Successfully added!", preferredStyle: .alert)
         
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) in
-//            self.setPopupBtn()
-//            self.titleTextField.text = ""
-//            self.locationTextField.text = ""
-//            self.amountTextField.text = ""
-//            self.datePicker.setDate(Date(), animated: false)
+            
             
             let homeVC = HomeViewController()
             
             let newItem = Expense(context: homeVC.context)
             newItem.category = self.addCategoryName
             newItem.title = self.addTitle
-            newItem.date = self.selectedDate!
+            newItem.date = self.selectedDate
             newItem.location = self.addLocation
             newItem.amount = self.addAmount
             
@@ -155,8 +151,14 @@ class AddViewController: UIViewController {
                 
             }
             
-            // re-fetch the data
+            self.setPopupBtn()
+            self.titleTextField.text = ""
+            self.locationTextField.text = ""
+            self.amountTextField.text = ""
+            self.datePicker.setDate(Date(), animated: false)
             
+            // re-fetch the data
+            homeVC.fetchItems()
             
         })
         
@@ -167,6 +169,7 @@ class AddViewController: UIViewController {
         
         // show alert
         self.present(alert, animated: true, completion: nil)
+        
 
 
         

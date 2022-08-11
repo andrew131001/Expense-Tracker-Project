@@ -76,7 +76,7 @@
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="iDh-jh-ABg" customClass="CustomTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDh-jh-ABg" id="41W-Qo-MXJ">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDh-jh-ABg" id="41W-Qo-MXJ" customClass="CustomTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
