@@ -15,11 +15,14 @@ class HomeViewController: UIViewController {
     @IBOutlet weak var currentBalanceLabel: UILabel!
     @IBOutlet weak var currentDateLabel: UILabel!
     
+
+    
     @IBOutlet weak var incomeLabel: UILabel!
     @IBOutlet weak var expenseLabel: UILabel!
     
     
     @IBOutlet weak var tableView: UITableView!
+    
     
     
 
@@ -42,7 +45,7 @@ class HomeViewController: UIViewController {
     var category: [String] = []
     var money: [Double] = []
     var index = 0
-    
+    var homeCellImage = UIImage()
 
     
 
@@ -61,9 +64,9 @@ class HomeViewController: UIViewController {
         
         view.layer.insertSublayer(gradientLayer, at: 0)
         
-        tableView.dataSource = self
         tableView.delegate = self
-        
+        tableView.dataSource = self
+
         
         
         getCurrentDate()
@@ -79,11 +82,18 @@ class HomeViewController: UIViewController {
         return false
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.fetchItems()
+    }
+    
     func fetchItems() {
         do {
             self.items = try context.fetch(Expense.fetchRequest())
             
             DispatchQueue.main.async {
+
                 
                 self.tableView?.reloadData()
                 
@@ -93,6 +103,8 @@ class HomeViewController: UIViewController {
             
         }
     }
+    
+    
     
     
 }// end class

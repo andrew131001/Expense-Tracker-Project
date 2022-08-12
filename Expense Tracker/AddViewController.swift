@@ -21,7 +21,7 @@ class AddViewController: UIViewController {
     
     let date = Date()
     let dateFormatter = DateFormatter()
-    var selectedDate: String = "Aug 10, 2022"
+    var selectedDate: String?
 
    
     
@@ -40,19 +40,20 @@ class AddViewController: UIViewController {
         
         // popup button
         popupBtn.layer.cornerRadius = 5
-        
-        datePicker.datePickerMode = .date
-        
-        
         setPopupBtn()
+        getCategoryName()
         
+
         // datepicker
         self.datePicker.addTarget(self, action: #selector(self.storeSelectedDate), for: UIControl.Event.valueChanged)
-        
+        datePicker.datePickerMode = .date
+        getCurrentDateFromDatePicker()
 
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
+        
+       
         
         
         
@@ -68,12 +69,20 @@ class AddViewController: UIViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         selectedDate = dateFormatter.string(from: datePicker.date)
-//        print(dateFormatter.string(from: datePicker.date))
-        print(selectedDate)
     }
     
     
+    func getCurrentDateFromDatePicker() {
+        let today = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM, yyyy"
+        selectedDate = dateFormatter.string(from: today)
+        
+    }
     
+    func getCategoryName() {
+        addCategoryName = popupBtn.currentTitle ?? ""
+    }
     
     
     
@@ -114,20 +123,15 @@ class AddViewController: UIViewController {
         popupBtn.changesSelectionAsPrimaryAction = true
         
     }
-    
-//    @IBAction func popupBtnChanged(_ sender: UIButton) {
-////        addCategoryName = sender.value(forKey: sender.menu!.title) as! String
-//        print(addCategoryName)
-//    }
 
 
     
     @IBAction func addBtn(_ sender: Any) {
 
         
-        self.addTitle = titleTextField.text!
-        self.addLocation = locationTextField.text!
-        self.addAmount = Double(amountTextField.text!)!
+        self.addTitle = titleTextField.text ?? ""
+        self.addLocation = locationTextField.text ?? ""
+        self.addAmount = Double(amountTextField.text ?? "0.0") ?? 0.0
 
         let alert = UIAlertController(title: "Confirm", message: "Successfully added!", preferredStyle: .alert)
         
@@ -146,10 +150,15 @@ class AddViewController: UIViewController {
             // save data
             do {
                 try homeVC.context.save()
+                
             }
             catch {
                 
             }
+
+            
+            // re-fetch the data
+            homeVC.fetchItems()
             
             self.setPopupBtn()
             self.titleTextField.text = ""
@@ -157,8 +166,9 @@ class AddViewController: UIViewController {
             self.amountTextField.text = ""
             self.datePicker.setDate(Date(), animated: false)
             
-            // re-fetch the data
-            homeVC.fetchItems()
+            
+            self.tabBarController?.selectedIndex = 0
+            
             
         })
         
@@ -170,13 +180,13 @@ class AddViewController: UIViewController {
         // show alert
         self.present(alert, animated: true, completion: nil)
         
-
-
-        
-        tabBarController?.selectedIndex = 0
         
         
-    }
+        
+        
+        
+        
+    }// end addBtn
 
     
     

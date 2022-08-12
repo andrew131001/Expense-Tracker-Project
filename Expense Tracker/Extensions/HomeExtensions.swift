@@ -17,7 +17,8 @@ extension HomeViewController {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         let currentDateString = dateFormatter.string(from: today)
-        currentDateLabel.text = currentDateString
+        self.currentDateLabel.text = currentDateString
+        
     }
     
     func getCurrentBalance() {
@@ -42,32 +43,34 @@ extension HomeViewController {
         
         
     }
-}
+    
+}// end extension
 
 extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     // add cells based on the number of data array
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return self.items?.count ?? 0
+        return items?.count ?? 0
     }
+    
     // assign values to each items
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
         
+        cell.selectionStyle = .none
+
+        
         let item = self.items!.reversed()[indexPath.row]
         
 
-            cell.categoryImageInCell.image = UIImage(named: item.category ?? "")!
+            cell.categoryImageInCell?.image = UIImage(named: item.category ?? "")!
 
-            cell.titleInCell.text = item.title
-            cell.timeInCell.text = item.date
-            cell.amountInCell.text = String(item.amount)
+            cell.titleInCell?.text = item.title
+            cell.timeInCell?.text = item.date
+            cell.amountInCell?.text = String(item.amount)
         
-//        category[index] += item.category!
-//        money[index] += item.amount
-//        print(category)
-//        print(money)
         
+
         
 //        if item.category! == "salary" || item.category! == "saving" {
 //            totalIncome += item.amount
@@ -75,7 +78,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
 //            totalExpense += item.amount
 //        }
 
-        index += 1
+//        index += 1
+        
         return cell
     }
     
@@ -98,6 +102,8 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
             detailVC.detailAmount = String(item.amount)
             
             self.navigationController?.pushViewController(detailVC, animated: true)
+            
+            
         }
     }
     
