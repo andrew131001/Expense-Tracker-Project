@@ -15,6 +15,7 @@ class AddViewController: UIViewController {
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var addBtn: UIButton!
     
     // declare variables
     let date = Date()
@@ -31,6 +32,8 @@ class AddViewController: UIViewController {
         
         // popup button
         popupBtn.layer.cornerRadius = 5
+        popupBtn.layer.borderWidth = 0.2
+        popupBtn.layer.borderColor = UIColor.lightGray.cgColor
         setPopupBtn()
         getCategoryName() // pass default value
         
@@ -39,7 +42,11 @@ class AddViewController: UIViewController {
         self.datePicker.addTarget(self, action: #selector(self.storeSelectedDate), for: UIControl.Event.valueChanged)
         datePicker.datePickerMode = .date // display only date, month, and year
         getCurrentDateFromDatePicker() // pass default value
-
+        
+        // add button
+        addBtn.layer.cornerRadius = 5
+        addBtn.titleLabel?.font = .systemFont(ofSize: 20)
+        
         // gesture recognizer to dissmiss keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)

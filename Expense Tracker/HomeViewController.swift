@@ -30,18 +30,6 @@ class HomeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        // Create a gradient layer.
-        let gradientLayer = CAGradientLayer()
-        // Set the size of the layer to be equal to size of the display.
-        gradientLayer.frame = view.bounds
-        // Set an array of Core Graphics colors (.cgColor) to create the gradient.
-        gradientLayer.colors = [
-            UIColor.systemPink.cgColor,
-            UIColor.systemOrange.cgColor,
-        ]
-        // add a sublayer
-        view.layer.insertSublayer(gradientLayer, at: 0)
-        
         tableView.delegate = self
         tableView.dataSource = self
 
