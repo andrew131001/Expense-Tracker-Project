@@ -20,7 +20,7 @@ extension ProfileViewController: UITableViewDelegate, UITableViewDataSource{
         let profile = self.items![indexPath.row]
         
         cell.nameLabel?.text = profile.name!
-        print(profile.name!)
+      //  print(profile.name!)
         return cell
     }
 }

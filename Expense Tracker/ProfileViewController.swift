@@ -46,7 +46,7 @@ class ProfileViewController: UIViewController {
     
         print("tapped")
         //create alert
-        let alert = UIAlertController(title: "Add Profile", message: "Add another shopping list?", preferredStyle: .alert)
+        let alert = UIAlertController(title: "Add to Shoping List", message: "Add item to shoping list?", preferredStyle: .alert)
         alert.addTextField()
         
         //configure button handler
@@ -75,6 +75,52 @@ class ProfileViewController: UIViewController {
         self.present(alert,animated: true,completion: nil)
     }
     
+    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath) -> UISwipeActionsConfiguration? {
+        let action = UIContextualAction(style: .destructive, title: "Delete"){(action,view,completionHandler) in
+                
+            
+            let profileToRemove = self.items![indexPath.row]
+            
+            self.context.delete(profileToRemove)
+            
+            do{
+                try self.context.save()
+            }catch{
+                
+            }
+            self.fetchProfile()
+        }
+        return UISwipeActionsConfiguration(actions: [action])
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let profile = self.items![indexPath.row]
+        
+        //create alert
+        let alert = UIAlertController(title:"Edit Item",message:"Edit Item",preferredStyle: .alert)
+        alert.addTextField()
+        
+        let textfield = alert.textFields![0]
+        textfield.text = profile.name
+        //configure button handler
+        let saveButton = UIAlertAction(title:"Save",style: .default){
+            (action) in
+            
+            let textfield = alert.textFields![0]
+            
+            profile.name = textfield.text
+            
+            do{
+                try self.context.save()
+            }catch{
+                
+            }
+            self.fetchProfile()
+        }
+        alert.addAction(saveButton)
+        self.present(alert,animated: true,completion: nil)
+    }
     /*
     // MARK: - Navigation
 
