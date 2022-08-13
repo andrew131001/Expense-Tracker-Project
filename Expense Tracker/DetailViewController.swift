@@ -15,6 +15,7 @@ class DetailViewController: UIViewController {
     @IBOutlet weak var locationLabel: UILabel!
     @IBOutlet weak var amountLabel: UILabel!
     
+    // defince variables
     var detailImg = UIImage()
     var detailTitle = ""
     var detailTime = ""
@@ -24,13 +25,12 @@ class DetailViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        // assign it to each object to display
         categoryImage.image = detailImg
         titleLabel.text = detailTitle
         timeLabel.text = detailTime
         locationLabel.text = detailLocation
         amountLabel.text = detailAmount
     }
-    
-
-}
+}// end class

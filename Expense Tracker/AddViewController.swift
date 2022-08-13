@@ -11,83 +11,80 @@ import UIKit
 class AddViewController: UIViewController {
 
     @IBOutlet weak var popupBtn: UIButton!
-    
-    
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var locationTextField: UITextField!
     @IBOutlet weak var amountTextField: UITextField!
-    
     @IBOutlet weak var datePicker: UIDatePicker!
+    @IBOutlet weak var addBtn: UIButton!
     
+    // declare variables
     let date = Date()
     let dateFormatter = DateFormatter()
-    var selectedDate: String = "Aug 10, 2022"
-
-   
-    
-
+    var selectedDate: String?
     var addCategoryName: String = ""
     var addTitle: String = ""
     var addLocation: String = ""
     var addAmount: Double = 0.0
     
 
-    
-    
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         // popup button
         popupBtn.layer.cornerRadius = 5
-        
-        datePicker.datePickerMode = .date
-        
-        
+        popupBtn.layer.borderWidth = 0.2
+        popupBtn.layer.borderColor = UIColor.lightGray.cgColor
         setPopupBtn()
-        
-        // datepicker
-        self.datePicker.addTarget(self, action: #selector(self.storeSelectedDate), for: UIControl.Event.valueChanged)
+        getCategoryName() // pass default value
         
 
+        // date picker
+        self.datePicker.addTarget(self, action: #selector(self.storeSelectedDate), for: UIControl.Event.valueChanged)
+        datePicker.datePickerMode = .date // display only date, month, and year
+        getCurrentDateFromDatePicker() // pass default value
         
+        // add button
+        addBtn.layer.cornerRadius = 5
+        addBtn.titleLabel?.font = .systemFont(ofSize: 20)
+        
+        // gesture recognizer to dissmiss keyboard
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
-        
-        
-        
     }// end viewDIdLoad
+    
     
     //dismiss keyboard
     @objc func dismissKeyboard() {
         view.endEditing(true)
     }
     
-     
+    // get selected date value and pass it
     @objc func storeSelectedDate(datePicker: UIDatePicker) {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "dd MMMM, yyyy"
         selectedDate = dateFormatter.string(from: datePicker.date)
-//        print(dateFormatter.string(from: datePicker.date))
-        print(selectedDate)
     }
     
+    // set up for default date value
+    func getCurrentDateFromDatePicker() {
+        let today = Date.now
+        let dateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd MMMM, yyyy"
+        selectedDate = dateFormatter.string(from: today)
+    }
     
+    // set up for default category name
+    func getCategoryName() {
+        addCategoryName = popupBtn.currentTitle ?? ""
+    }
     
-    
-    
-    
+    // set up pop up button
     func setPopupBtn() {
         
-        let optionClosure = { (action : UIAction) in
-            
-            self.addCategoryName = action.title
-            print("\(self.addCategoryName)")
-            print("print for \(action.title)"
-            
-            )}
+        // get pop up button title value and assign it to addCategoryName
+        let optionClosure = { (action : UIAction) in self.addCategoryName = action.title }
         
-        
+        // set items for pop up menu
         popupBtn.menu = UIMenu(children: [
             UIAction(title: "groceries", handler: optionClosure),
             UIAction(title: "car", handler: optionClosure),
@@ -114,28 +111,25 @@ class AddViewController: UIViewController {
         popupBtn.changesSelectionAsPrimaryAction = true
         
     }
-    
-//    @IBAction func popupBtnChanged(_ sender: UIButton) {
-////        addCategoryName = sender.value(forKey: sender.menu!.title) as! String
-//        print(addCategoryName)
-//    }
-
 
     
     @IBAction func addBtn(_ sender: Any) {
 
+        // pass inserted values to proper variables
+        self.addTitle = titleTextField.text ?? ""
+        self.addLocation = locationTextField.text ?? ""
+        self.addAmount = Double(amountTextField.text ?? "0.0") ?? 0.0
         
-        self.addTitle = titleTextField.text!
-        self.addLocation = locationTextField.text!
-        self.addAmount = Double(amountTextField.text!)!
-
+        // create alert
         let alert = UIAlertController(title: "Confirm", message: "Successfully added!", preferredStyle: .alert)
         
+        // create 'OK' button
         let ok = UIAlertAction(title: "OK", style: .default, handler: { (action) in
             
-            
+            // instantiate HomeViewController
             let homeVC = HomeViewController()
             
+            // access to object manage context and pass values
             let newItem = Expense(context: homeVC.context)
             newItem.category = self.addCategoryName
             newItem.title = self.addTitle
@@ -148,37 +142,27 @@ class AddViewController: UIViewController {
                 try homeVC.context.save()
             }
             catch {
-                
+                print(error)
             }
+
+            // re-fetch the data
+            homeVC.fetchItems()
             
+            // re-set all objects to default value
             self.setPopupBtn()
             self.titleTextField.text = ""
             self.locationTextField.text = ""
             self.amountTextField.text = ""
             self.datePicker.setDate(Date(), animated: false)
             
-            // re-fetch the data
-            homeVC.fetchItems()
-            
+            // move to Home screen after clicking 'OK' button on dialog
+            self.tabBarController?.selectedIndex = 0
         })
-        
-        
         
         // add button
         alert.addAction(ok)
         
         // show alert
         self.present(alert, animated: true, completion: nil)
-        
-
-
-        
-        tabBarController?.selectedIndex = 0
-        
-        
-    }
-
-    
-    
-
+    }// end addBtn
 }// end class
