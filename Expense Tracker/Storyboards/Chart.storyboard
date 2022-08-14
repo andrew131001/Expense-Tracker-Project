@@ -9,9 +9,8 @@
         <!--Chart-->
         <scene sceneID="znC-Rc-RR0">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="IcU-Uh-Ec6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
                 <navigationController id="4lh-jP-Xe2" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Chart" image="tabBarItem:p9W-QO-qJH:image" catalog="system" selectedImage="tabBarItem:p9W-QO-qJH:image" id="p9W-QO-qJH"/>
+                    <tabBarItem key="tabBarItem" title="Chart" image="tabBarItem:p9W-QO-qJH:image" selectedImage="tabBarItem:p9W-QO-qJH:image" id="p9W-QO-qJH"/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="qNr-vB-UVK">
                         <rect key="frame" x="0.0" y="44" width="414" height="44"/>
@@ -21,6 +20,7 @@
                         <segue destination="bBQ-Nt-p9M" kind="relationship" relationship="rootViewController" id="XSj-9M-Uuy"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="IcU-Uh-Ec6" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-1184" y="-80"/>
         </scene>
@@ -36,7 +36,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="tabBarItem:p9W-QO-qJH:image" catalog="system" width="128" height="121">
+        <image name="tabBarItem:p9W-QO-qJH:image" width="128" height="121">
             <mutableData key="keyedArchiveRepresentation">
 YnBsaXN0MDDUAQIDBAUGBwpYJHZlcnNpb25ZJGFyY2hpdmVyVCR0b3BYJG9iamVjdHMSAAGGoF8QD05T
 S2V5ZWRBcmNoaXZlctEICVRyb290gAGvEBELDBscIRkmKywzNjlDS0xQU1UkbnVsbNcNDg8QERITFBUW

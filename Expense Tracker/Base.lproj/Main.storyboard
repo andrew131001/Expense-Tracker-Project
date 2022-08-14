@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAq-ec-TlG">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="rAq-ec-TlG">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -40,7 +40,7 @@
         <scene sceneID="yzA-9D-BYQ">
             <objects>
                 <viewControllerPlaceholder storyboardName="Chart" id="oRU-4W-Ymj" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" id="gEv-t5-vwn"/>
+                    <tabBarItem key="tabBarItem" title="Item" selectedImage="chart.pie" catalog="system" id="gEv-t5-vwn"/>
                 </viewControllerPlaceholder>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="brw-2t-jFq" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
@@ -78,4 +78,7 @@
             <point key="canvasLocation" x="1035" y="-44"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="chart.pie" catalog="system" width="128" height="121"/>
+    </resources>
 </document>

@@ -34,6 +34,7 @@
 		B915C79528A83B8500EF2DF8 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915C79428A83B8500EF2DF8 /* ChartViewController.swift */; };
 		B915C79728A83BA500EF2DF8 /* CategoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915C79628A83BA500EF2DF8 /* CategoryViewController.swift */; };
 		B915C79928A876AB00EF2DF8 /* CategoryDetailTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915C79828A876AB00EF2DF8 /* CategoryDetailTableViewController.swift */; };
+		B9259A9128A90027004BAAE6 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B9259A9028A90027004BAAE6 /* CategoryTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -68,6 +69,7 @@
 		B915C79428A83B8500EF2DF8 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 		B915C79628A83BA500EF2DF8 /* CategoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryViewController.swift; sourceTree = "<group>"; };
 		B915C79828A876AB00EF2DF8 /* CategoryDetailTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailTableViewController.swift; sourceTree = "<group>"; };
+		B9259A9028A90027004BAAE6 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -147,6 +149,7 @@
 				492394CA2895776B001F2607 /* Storyboards */,
 				49312B21287A8E5F00E02336 /* HomeViewController.swift */,
 				B915C79828A876AB00EF2DF8 /* CategoryDetailTableViewController.swift */,
+				B9259A9028A90027004BAAE6 /* CategoryTableViewCell.swift */,
 				B915C79628A83BA500EF2DF8 /* CategoryViewController.swift */,
 				496DFC1828A2F38F00F6D142 /* AddViewController.swift */,
 				492394DF28959E71001F2607 /* DetailViewController.swift */,
@@ -317,6 +320,7 @@
 				972F814D28A4D2AE00D92ACF /* Profile+CoreDataClass.swift in Sources */,
 				496DFC2428A2F4AC00F6D142 /* Expense+CoreDataProperties.swift in Sources */,
 				972F814E28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift in Sources */,
+				B9259A9128A90027004BAAE6 /* CategoryTableViewCell.swift in Sources */,
 				B915C79928A876AB00EF2DF8 /* CategoryDetailTableViewController.swift in Sources */,
 				496DFC1B28A2F3E600F6D142 /* HomeExtensions.swift in Sources */,
 				97AF2A3E28A4E8430025FCCD /* ProfileCell.swift in Sources */,
