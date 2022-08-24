@@ -1,5 +1,5 @@
 //
-//  DetailViewController.swift
+//  HomeDetailViewController.swift
 //  Expense Tracker
 //
 //  Created by Andrew Ok on 2022-07-30.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class DetailViewController: UIViewController {
+class HomeDetailViewController: UIViewController {
     
     @IBOutlet weak var categoryImage: UIImageView!
     @IBOutlet weak var titleLabel: UILabel!

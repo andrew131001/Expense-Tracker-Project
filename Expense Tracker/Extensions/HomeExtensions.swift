@@ -32,7 +32,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     // display each rows on tableview
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! CustomTableViewCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath) as! HomeTableViewCell
 
         // no style applies when user touch the cell
         cell.selectionStyle = .none
@@ -94,7 +94,7 @@ extension HomeViewController: UITableViewDataSource, UITableViewDelegate {
     // instantiate "DetailsViewController"
     // pass data to it and go to the detail screen
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? DetailViewController {
+        if let detailVC = storyboard?.instantiateViewController(withIdentifier: "DetailViewController") as? HomeDetailViewController {
             
             // fet and assign values to proper variables in detail view controller
             let item = self.items!.reversed()[indexPath.row]

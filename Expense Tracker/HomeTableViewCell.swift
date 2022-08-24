@@ -1,5 +1,5 @@
 //
-//  CustomTableViewCell.swift
+//  HomeTableViewCell.swift
 //  Expense Tracker
 //
 //  Created by Andrew Ok on 2022-07-30.
@@ -7,7 +7,7 @@
 
 import UIKit
 
-class CustomTableViewCell: UITableViewCell {
+class HomeTableViewCell: UITableViewCell {
     
     @IBOutlet weak var categoryImageInCell: UIImageView!
     @IBOutlet weak var titleInCell: UILabel!

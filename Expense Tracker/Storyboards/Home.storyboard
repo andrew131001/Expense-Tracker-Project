@@ -73,10 +73,10 @@
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="iDh-jh-ABg" customClass="CustomTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleAspectFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="cell" rowHeight="104" id="iDh-jh-ABg" customClass="HomeTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="44.666666030883789" width="428" height="104"/>
                                         <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDh-jh-ABg" id="41W-Qo-MXJ" customClass="CustomTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="iDh-jh-ABg" id="41W-Qo-MXJ" customClass="HomeTableViewCell" customModule="Expense_Tracker" customModuleProvider="target">
                                             <rect key="frame" x="0.0" y="0.0" width="428" height="104"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
@@ -173,10 +173,10 @@
             </objects>
             <point key="canvasLocation" x="-529.90654205607473" y="375.16198704103675"/>
         </scene>
-        <!--Detail View Controller-->
+        <!--Home Detail View Controller-->
         <scene sceneID="vfc-UE-okh">
             <objects>
-                <viewController storyboardIdentifier="DetailViewController" id="JEI-yl-XuS" customClass="DetailViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="DetailViewController" id="JEI-yl-XuS" customClass="HomeDetailViewController" customModule="Expense_Tracker" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="L8O-T9-sXA">
                         <rect key="frame" x="0.0" y="0.0" width="428" height="926"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
