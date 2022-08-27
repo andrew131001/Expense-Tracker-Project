@@ -1,6 +1,6 @@
 # Expense-Tracker-Project
 
-Group Project dealt with MVC pattern and Core Data included Chart git library. Keep records of expenses to manage expenditure habits.
+Group Project dealt with MVC pattern and Core Data included Chart git library. Keep records of expenses to manage expenditure habits. Display comprehansive views via TableViews and a Chart.
 
 ## Description by each member
 
