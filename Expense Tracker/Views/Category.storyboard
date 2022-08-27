@@ -112,11 +112,11 @@
             </objects>
             <point key="canvasLocation" x="179.71014492753625" y="337.5"/>
         </scene>
-        <!--Item-->
+        <!--Category-->
         <scene sceneID="cBI-Oc-liv">
             <objects>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="NHO-zI-0TJ" sceneMemberID="viewController">
-                    <tabBarItem key="tabBarItem" title="Item" image="rectangle.grid.2x2.fill" catalog="system" selectedImage="rectangle.grid.2x2.fill" id="wU7-kn-02z"/>
+                    <tabBarItem key="tabBarItem" title="Category" image="rectangle.grid.2x2.fill" catalog="system" selectedImage="rectangle.grid.2x2.fill" id="wU7-kn-02z"/>
                     <toolbarItems/>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="io6-HT-zko">
