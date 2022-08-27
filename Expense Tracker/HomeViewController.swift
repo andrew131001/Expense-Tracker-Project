@@ -40,12 +40,6 @@ class HomeViewController: UIViewController {
         fetchItems()
     }
     
-    
-    override var shouldAutorotate: Bool {
-        return false
-    }
-    
-    
     // re-fresh tableview data after adding item
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)

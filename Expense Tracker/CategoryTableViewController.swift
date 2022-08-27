@@ -8,14 +8,6 @@
 import UIKit
 import CoreData
 
-struct Content {
-    var category: String
-    var title: String
-    var date: String
-    var amount: String
-    var location: String
-}
-
 class CategoryTableViewController: UITableViewController {
     
     let categories:[String]  = ["car","card","clothes","coffee","eat-out","education","fitness","gas","gift","groceries","home","hydro","medical-expense","miscellaneous","phone","public-transport","salary","saving","travel"]
@@ -45,6 +37,13 @@ class CategoryTableViewController: UITableViewController {
         super.viewDidLoad()
         fetchItems()
         getData()
+    }
+    
+    // re-fresh data 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.fetchItems()
     }
     
     

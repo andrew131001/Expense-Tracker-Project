@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		483BB3DBFAEB637C596DD2C3 /* Pods_Expense_Tracker.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 35B5AB42EF1236AEDCAAA5F0 /* Pods_Expense_Tracker.framework */; };
+		491C3D9528BA9FF500DF04FC /* Structs.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491C3D9428BA9FF500DF04FC /* Structs.swift */; };
 		491F707A28B49D0400FA98A4 /* CategoryTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F707928B49D0400FA98A4 /* CategoryTableViewController.swift */; };
 		491F707C28B49F1600FA98A4 /* CategoryTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F707B28B49F1600FA98A4 /* CategoryTableViewCell.swift */; };
 		491F707E28B49FA600FA98A4 /* CategoryDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 491F707D28B49FA600FA98A4 /* CategoryDetailViewController.swift */; };
@@ -40,6 +41,7 @@
 /* Begin PBXFileReference section */
 		29753D201259FAA09718F2A1 /* Pods-Expense Tracker.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Expense Tracker.debug.xcconfig"; path = "Target Support Files/Pods-Expense Tracker/Pods-Expense Tracker.debug.xcconfig"; sourceTree = "<group>"; };
 		35B5AB42EF1236AEDCAAA5F0 /* Pods_Expense_Tracker.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Expense_Tracker.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		491C3D9428BA9FF500DF04FC /* Structs.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Structs.swift; sourceTree = "<group>"; };
 		491F707928B49D0400FA98A4 /* CategoryTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewController.swift; sourceTree = "<group>"; };
 		491F707B28B49F1600FA98A4 /* CategoryTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryTableViewCell.swift; sourceTree = "<group>"; };
 		491F707D28B49FA600FA98A4 /* CategoryDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryDetailViewController.swift; sourceTree = "<group>"; };
@@ -92,7 +94,7 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
-		492394CA2895776B001F2607 /* Storyboards */ = {
+		492394CA2895776B001F2607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
 				492394CB289577A3001F2607 /* Home.storyboard */,
@@ -101,7 +103,7 @@
 				492394D3289582BB001F2607 /* Chart.storyboard */,
 				492394D52895834C001F2607 /* Profile.storyboard */,
 			);
-			path = Storyboards;
+			path = Views;
 			sourceTree = "<group>";
 		};
 		492394D728958CE7001F2607 /* Delegates */ = {
@@ -113,13 +115,14 @@
 			path = Delegates;
 			sourceTree = "<group>";
 		};
-		492394DA2895967D001F2607 /* Extensions */ = {
+		492394DA2895967D001F2607 /* Models */ = {
 			isa = PBXGroup;
 			children = (
 				496DFC1A28A2F3E600F6D142 /* HomeExtensions.swift */,
 				972F815128A4DC7500D92ACF /* ProfileExtension.swift */,
+				491C3D9428BA9FF500DF04FC /* Structs.swift */,
 			);
-			path = Extensions;
+			path = Models;
 			sourceTree = "<group>";
 		};
 		49312B11287A8E5F00E02336 = {
@@ -145,8 +148,8 @@
 			children = (
 				496DFC2528A2F4B400F6D142 /* CoreData */,
 				492394D728958CE7001F2607 /* Delegates */,
-				492394DA2895967D001F2607 /* Extensions */,
-				492394CA2895776B001F2607 /* Storyboards */,
+				492394DA2895967D001F2607 /* Models */,
+				492394CA2895776B001F2607 /* Views */,
 				49312B21287A8E5F00E02336 /* HomeViewController.swift */,
 				492394DF28959E71001F2607 /* HomeDetailViewController.swift */,
 				492394DD289597EA001F2607 /* HomeTableViewCell.swift */,
@@ -318,6 +321,7 @@
 				49312B1E287A8E5F00E02336 /* AppDelegate.swift in Sources */,
 				972F815228A4DC7500D92ACF /* ProfileExtension.swift in Sources */,
 				492394E028959E71001F2607 /* HomeDetailViewController.swift in Sources */,
+				491C3D9528BA9FF500DF04FC /* Structs.swift in Sources */,
 				972F814D28A4D2AE00D92ACF /* Profile+CoreDataClass.swift in Sources */,
 				496DFC2428A2F4AC00F6D142 /* Expense+CoreDataProperties.swift in Sources */,
 				972F814E28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift in Sources */,

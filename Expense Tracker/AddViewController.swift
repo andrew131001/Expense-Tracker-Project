@@ -36,7 +36,6 @@ class AddViewController: UIViewController {
         popupBtn.layer.borderColor = UIColor.lightGray.cgColor
         setPopupBtn()
         getCategoryName() // pass default value
-        
 
         // date picker
         self.datePicker.addTarget(self, action: #selector(self.storeSelectedDate), for: UIControl.Event.valueChanged)
@@ -144,9 +143,6 @@ class AddViewController: UIViewController {
             catch {
                 print(error)
             }
-
-            // re-fetch the data
-            homeVC.fetchItems()
             
             // re-set all objects to default value
             self.setPopupBtn()
