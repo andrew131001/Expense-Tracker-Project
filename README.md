@@ -5,8 +5,8 @@ Group Project dealt with MVC pattern and Core Data included Chart git library. K
 ## Description by each member
 
 ### By Daeyeong Ok
-Home: Display Current balance along with income and expenses. TableView with CRUD functionality shows what types of items added so far. When you select one of them, it goes to detail info screen.
-Category: Enumerate all categories. Detail info based on the category will be on the next screen by selecting one of them.
+Home: Display Current balance along with income and expenses. TableView with CRUD functionality shows what types of items added so far. When you select one of them, it goes to detail info screen.<br>
+Category: Enumerate all categories. Detail info based on the category will be on the next screen by selecting one of them.<br>
 Add: All info will be ready to get inputs. By clicking 'Add' button, item is going to be added.
 
 <img width="318" alt="home" src="https://user-images.githubusercontent.com/37741042/187049086-e35e5029-4a4a-44a9-910d-64659f7f498e.png"> <img width="325" alt="home-detail" src="https://user-images.githubusercontent.com/37741042/187049092-dfe1caba-7ce3-47f2-905d-f2b01485fc23.png">
