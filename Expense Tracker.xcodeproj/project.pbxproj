@@ -33,8 +33,7 @@
 		972F814D28A4D2AE00D92ACF /* Profile+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F814B28A4D2AE00D92ACF /* Profile+CoreDataClass.swift */; };
 		972F814E28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F814C28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift */; };
 		972F815028A4D6F600D92ACF /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F814F28A4D6F600D92ACF /* ProfileViewController.swift */; };
-		972F815228A4DC7500D92ACF /* ProfileExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F815128A4DC7500D92ACF /* ProfileExtension.swift */; };
-		97AF2A3E28A4E8430025FCCD /* ProfileCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 97AF2A3D28A4E8430025FCCD /* ProfileCell.swift */; };
+		972F815228A4DC7500D92ACF /* ProfileExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 972F815128A4DC7500D92ACF /* ProfileExtensions.swift */; };
 		B915C79528A83B8500EF2DF8 /* ChartViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B915C79428A83B8500EF2DF8 /* ChartViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -69,8 +68,7 @@
 		972F814B28A4D2AE00D92ACF /* Profile+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataClass.swift"; sourceTree = "<group>"; };
 		972F814C28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Profile+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		972F814F28A4D6F600D92ACF /* ProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
-		972F815128A4DC7500D92ACF /* ProfileExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileExtension.swift; sourceTree = "<group>"; };
-		97AF2A3D28A4E8430025FCCD /* ProfileCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileCell.swift; sourceTree = "<group>"; };
+		972F815128A4DC7500D92ACF /* ProfileExtensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileExtensions.swift; sourceTree = "<group>"; };
 		B915C79428A83B8500EF2DF8 /* ChartViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -94,9 +92,26 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		491C3D9728BAB61D00DF04FC /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				49312B21287A8E5F00E02336 /* HomeViewController.swift */,
+				492394DF28959E71001F2607 /* HomeDetailViewController.swift */,
+				492394DD289597EA001F2607 /* HomeTableViewCell.swift */,
+				496DFC1828A2F38F00F6D142 /* AddViewController.swift */,
+				491F707928B49D0400FA98A4 /* CategoryTableViewController.swift */,
+				491F707D28B49FA600FA98A4 /* CategoryDetailViewController.swift */,
+				491F707B28B49F1600FA98A4 /* CategoryTableViewCell.swift */,
+				B915C79428A83B8500EF2DF8 /* ChartViewController.swift */,
+				972F814F28A4D6F600D92ACF /* ProfileViewController.swift */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
 		492394CA2895776B001F2607 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				49312B23287A8E5F00E02336 /* Main.storyboard */,
 				492394CB289577A3001F2607 /* Home.storyboard */,
 				492394CD28957DA7001F2607 /* Category.storyboard */,
 				492394D128958196001F2607 /* Add.storyboard */,
@@ -119,7 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				496DFC1A28A2F3E600F6D142 /* HomeExtensions.swift */,
-				972F815128A4DC7500D92ACF /* ProfileExtension.swift */,
+				972F815128A4DC7500D92ACF /* ProfileExtensions.swift */,
 				491C3D9428BA9FF500DF04FC /* Structs.swift */,
 			);
 			path = Models;
@@ -150,17 +165,7 @@
 				492394D728958CE7001F2607 /* Delegates */,
 				492394DA2895967D001F2607 /* Models */,
 				492394CA2895776B001F2607 /* Views */,
-				49312B21287A8E5F00E02336 /* HomeViewController.swift */,
-				492394DF28959E71001F2607 /* HomeDetailViewController.swift */,
-				492394DD289597EA001F2607 /* HomeTableViewCell.swift */,
-				496DFC1828A2F38F00F6D142 /* AddViewController.swift */,
-				491F707928B49D0400FA98A4 /* CategoryTableViewController.swift */,
-				491F707D28B49FA600FA98A4 /* CategoryDetailViewController.swift */,
-				491F707B28B49F1600FA98A4 /* CategoryTableViewCell.swift */,
-				B915C79428A83B8500EF2DF8 /* ChartViewController.swift */,
-				972F814F28A4D6F600D92ACF /* ProfileViewController.swift */,
-				97AF2A3D28A4E8430025FCCD /* ProfileCell.swift */,
-				49312B23287A8E5F00E02336 /* Main.storyboard */,
+				491C3D9728BAB61D00DF04FC /* Controllers */,
 				49312B26287A8E6300E02336 /* Assets.xcassets */,
 				49312B28287A8E6300E02336 /* LaunchScreen.storyboard */,
 				49312B2B287A8E6300E02336 /* Info.plist */,
@@ -319,7 +324,7 @@
 				B915C79528A83B8500EF2DF8 /* ChartViewController.swift in Sources */,
 				496DFC1928A2F38F00F6D142 /* AddViewController.swift in Sources */,
 				49312B1E287A8E5F00E02336 /* AppDelegate.swift in Sources */,
-				972F815228A4DC7500D92ACF /* ProfileExtension.swift in Sources */,
+				972F815228A4DC7500D92ACF /* ProfileExtensions.swift in Sources */,
 				492394E028959E71001F2607 /* HomeDetailViewController.swift in Sources */,
 				491C3D9528BA9FF500DF04FC /* Structs.swift in Sources */,
 				972F814D28A4D2AE00D92ACF /* Profile+CoreDataClass.swift in Sources */,
@@ -327,7 +332,6 @@
 				972F814E28A4D2AE00D92ACF /* Profile+CoreDataProperties.swift in Sources */,
 				491F707C28B49F1600FA98A4 /* CategoryTableViewCell.swift in Sources */,
 				496DFC1B28A2F3E600F6D142 /* HomeExtensions.swift in Sources */,
-				97AF2A3E28A4E8430025FCCD /* ProfileCell.swift in Sources */,
 				49312B20287A8E5F00E02336 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
